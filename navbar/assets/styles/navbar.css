@@ -2,33 +2,14 @@
 *::before,
 *::after {
 	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
-html {
-	height: 100%;
-}
-
-ul[class],
-ol[class] {
+ul,
+ol {
 	padding: 0;
 	list-style: none;
-}
-
-body {
-	min-height: 100%;
-	line-height: 1;
-	scroll-behavior: smooth;
-	-webkit-text-size-adjust: 100%;
-	-webkit-tap-highlight-color: transparent;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-text-decoration-skip: objects;
-	text-decoration-skip: objects;
-	text-rendering: optimizeSpeed;
-}
-
-a {
-	color: inherit;
 }
 
 .container {
@@ -38,48 +19,8 @@ a {
 	margin: 0 auto;
 }
 
-.img-wrap {
-	position: relative;
-	padding-bottom: 60%;
-	overflow: hidden;
-}
-
-.img-cover,
-.img-contain {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-}
-
-.img-cover {
-	-o-object-fit: cover;
-	object-fit: cover;
-}
-
-.img-contain {
-	-o-object-fit: contain;
-	object-fit: contain;
-}
-
-.wrapper {
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	min-height: 100vh;
-	overflow: hidden;
-}
-
-.content {
-	flex: 1 0 auto;
-}
-
-.footer {
-	flex: 0 0 auto;
-}
-
 a {
+	color: inherit;
 	text-decoration: none;
 	background-color: transparent;
 }
@@ -88,6 +29,30 @@ img,
 picture {
 	display: block;
 	max-width: 100%;
+}
+
+audio,
+video {
+	display: block;
+}
+
+pre,
+code,
+kbd,
+samp {
+	font-size: inherit;
+	font-family: monospace;
+}
+
+iframe {
+	border: none;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
 }
 
 ::-moz-selection {
@@ -100,7 +65,17 @@ picture {
 	background-color: #7656d2;
 }
 
+[hidden] {
+	display: none;
+}
+
+:disabled,
+.disabled {
+	cursor: not-allowed;
+}
+
 .navbar {
+	z-index: 10;
 	padding: 10px;
 	padding-top: 30px;
 }
@@ -251,7 +226,6 @@ picture {
 
 .navbar-user__menu-link {
 	display: none;
-	visibility: hidden;
 	opacity: 0;
 }
 
@@ -328,9 +302,12 @@ picture {
 		opacity: 1;
 	}
 
+	.navbar-user__menu {
+		transform: translateY(10px);
+	}
+
 	.navbar-user__menu-link {
 		display: block;
-		visibility: visible;
 		opacity: 1;
 	}
 
@@ -356,3 +333,4 @@ picture {
 		order: 0;
 	}
 }
+/*# sourceMappingURL=navbar.css.map */
