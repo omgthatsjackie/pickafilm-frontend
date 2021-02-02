@@ -1,8 +1,13 @@
 // -- html elements --
 const navbarMenuLine = document.querySelector(".navbar-menu__line")
 const navbarMenuLinks = document.querySelectorAll(".navbar-menu__link")
+const navbarBurger = document.querySelector(".navbar-user__burger")
+const navbarBurgerBg = document.querySelector(".burger-menu__bg")
+const navbarBurgerList = document.querySelector(".burger-menu__list")
+const navbarBurgerMenu = document.querySelector(".burger-menu")
 
 // -- functions --
+
 const navbarMenuLineAnimation = (e) => {
 	// if (e === undefined) return
 	const active = document.querySelector(".navbar-menu__link.active")
@@ -10,9 +15,7 @@ const navbarMenuLineAnimation = (e) => {
 	const activeWidth = active.offsetWidth
 	const activeLeft = active.offsetLeft
 	if (e !== null && e.type === "click" && /Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
-		navbarMenuLine.style.transition = "als 0.3s ease 0s"
-	}
-	if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
+		navbarMenuLine.style.transition = "all 0.3s ease 0s"
 	}
 	navbarMenuLine.style.width = `${activeWidth}px`
 	navbarMenuLine.style.left = `${activeLeft}px`
@@ -73,4 +76,21 @@ navbarMenuLinks.forEach((link) => {
 
 window.addEventListener("resize", navbarMenuLineAnimation)
 
-//# sourceMappingURL=navbar.js.map
+navbarBurger.addEventListener("click", () => {
+	document.body.classList.add("burger-menu-active")
+	navbarBurgerMenu.classList.add("active")
+})
+
+navbarBurgerBg.addEventListener("click", () => {
+	document.body.classList.remove("burger-menu-active")
+	navbarBurgerMenu.classList.remove("active")
+})
+
+navbarBurgerList.addEventListener("click", (e) => {
+	if (e.target.classList.contains("burger-menu__list")) {
+		document.body.classList.remove("burger-menu-active")
+		navbarBurgerMenu.classList.remove("active")
+	}
+})
+
+//# sourceMappingURL=test.js.map
