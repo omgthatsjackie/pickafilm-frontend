@@ -90,7 +90,7 @@
 
 .navbar-user__menu-wrapper {
   position: absolute;
-  top: 5%;
+  top: 150px;
   right: 0;
   visibility: hidden;
   opacity: 0;
@@ -172,7 +172,7 @@
     font-size: 24px;
   }
   .navbar-user .active {
-    transform: translate(0, -10%);
+    transform: translate(0, -15%);
   }
 }
 
@@ -194,7 +194,7 @@
     display: none;
   }
   .navbar-user__menu-wrapper {
-    top: 3.3%;
+    top: 170px;
   }
   .navbar-user__menu-wrapper .navbar-user__menu {
     padding: 25px 25px;
@@ -228,7 +228,7 @@
     height: 60px;
   }
   .navbar-user__menu-wrapper {
-    top: 3%;
+    top: 150px;
   }
   .navbar-user__menu-wrapper
     .navbar-user__menu
