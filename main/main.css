@@ -1,23 +1,23 @@
 @font-face {
-  font-family: 'SF Pro Display', sans-serif;
-  src: url('../fonts/SFProDisplay-Regular.woff2') format('woff2'),
-    url('../fonts/SFProDisplay-Regular.ttf') format('truetype');
+  font-family: "SF Pro Display", sans-serif;
+  src: url("../fonts/SFProDisplay-Regular.woff2") format("woff2"),
+    url("../fonts/SFProDisplay-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'SF Pro Display', sans-serif;
-  src: url('../fonts/SFProDisplay-Medium.woff2') format('woff2'),
-    url('../fonts/SFProDisplay-Medium.ttf') format('truetype');
+  font-family: "SF Pro Display", sans-serif;
+  src: url("../fonts/SFProDisplay-Medium.woff2") format("woff2"),
+    url("../fonts/SFProDisplay-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'SF Pro Display', sans-serif;
-  src: url('../fonts/SFProDisplay-Bold.woff2') format('woff2'),
-    url('../fonts/SFProDisplay-Bold.ttf') format('truetype');
+  font-family: "SF Pro Display", sans-serif;
+  src: url("../fonts/SFProDisplay-Bold.woff2") format("woff2"),
+    url("../fonts/SFProDisplay-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
@@ -42,7 +42,7 @@
 
 body {
   position: relative;
-  font-family: 'SF Pro Display', sans-serif;
+  font-family: "SF Pro Display", sans-serif;
   background-color: var(--bg-color);
   color: var(--text-color);
   transition: 0.3s;
@@ -80,10 +80,10 @@ body {
   padding: 0 25px;
 }
 
-/* *:focus-visible {
+*:focus-visible {
   outline: 0;
   box-shadow: 0 0 0 2px #7656d2;
-} */
+}
 
 .filter__background {
   position: absolute;
@@ -170,7 +170,7 @@ body {
   position: absolute;
   top: -30px;
   right: 60px;
-  content: '';
+  content: "";
   width: 70px;
   height: 70px;
   border-radius: 5px;
@@ -668,6 +668,9 @@ body {
   .content .cards .card .film-labels .genres {
     display: none;
   }
+  .theme-toggler {
+    top: 88%;
+  }
 }
 
 @media (max-width: 360px) {
@@ -687,5 +690,8 @@ body {
   }
   .content .cards .card .film-labels .genres {
     display: none;
+  }
+  .theme-toggler {
+    top: 87%;
   }
 }
